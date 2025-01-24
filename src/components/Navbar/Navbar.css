@@ -1,0 +1,107 @@
+.navbar {
+  width: 100%;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  font-size: 14px;
+  color: #efefef;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  z-index: 1;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar-left img {
+  width: 90px;
+}
+
+.navbar-left ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  cursor: pointer;
+}
+.navbar-right {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-right .icons {
+  width: 20px;
+  cursor: pointer;
+}
+
+.navbar-right .profile-icon {
+  width: 30px;
+  border-radius: 10px;
+}
+
+.navbar-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar .sign-out {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  width: max-content;
+  background-color: #191919;
+  border-radius: 3px;
+  z-index: 10;
+  text-decoration: underline;
+  padding: 10px 20px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: none;
+}
+.navbar-profile .sign-out.visible {
+  display: block;
+}
+
+.navbar .sign-out p {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.navbar-dark {
+  background: #141414;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 20px 4%;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+  .navbar img {
+    height: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .navbar img {
+    height: 20px;
+  }
+  .navbar-right {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,123 @@
+.login-div {
+  height: auto;
+  background-image: linear-gradient(#0000007e, #0000007e), url(/Banner_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 8px;
+}
+.login-logo {
+  width: 170px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 170px;
+}
+body {
+  background-color: #141414;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  padding: 60px;
+  margin: auto;
+}
+
+.login-form .heading {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.login-form .login-input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  padding: 10px;
+  color: white;
+}
+.signin-btn {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  padding: 10px;
+  color: white;
+}
+.login-form input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b5b4b4;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox-input {
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+  padding-top: 10px;
+}
+.or-para {
+  text-align: center;
+  color: #b5b4b4;
+}
+.new {
+  color: #b5b4b4;
+}
+.link-style {
+  color: white;
+  margin-left: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+.link-style:hover {
+  text-decoration: underline;
+}
+.signin-code {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  padding: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #b5b4b4;
+}
+.signin-code:hover {
+  background-color: gray;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  font-weight: 200;
+}
+.loading-spinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .login-div {
+    padding: 15px 5%;
+  }
+  .login-logo {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .login-form {
+    padding: 20px;
+    margin-top: 0px;
+  }
+}
