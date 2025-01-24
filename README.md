@@ -31,8 +31,8 @@ This is a fully functional web application where users can watch their favorite 
 
 ## 📂 Project Structure
 
-![Project Structure](./assets/project-structure.jpeg)
+![Project Structure](./src/assets/project-structure.jpeg)
 
 ## 📂 Project Preview
 
-![Netflix Clone Preview](./assets/netflix-clone-preview.jpeg)
+![Netflix Clone Preview](./src/assets/netflix-clone-preview.jpeg)
