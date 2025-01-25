@@ -26,17 +26,6 @@ function App() {
       <div>
         <ToastContainer theme="dark" />
         <Routes>
-          {/* root route - to check if the user is authenticated? */}
-          <Route
-            path="/"
-            element={
-              isAuthenticated ? (
-                <Navigate to="/home" />
-              ) : (
-                <Navigate to="/login" />
-              )
-            }
-          />
           {/* public routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
@@ -57,6 +46,17 @@ function App() {
               <ProtectedRoute>
                 <Player />
               </ProtectedRoute>
+            }
+          />
+          {/* root route - to check if the user is authenticated? */}
+          <Route
+            path="/"
+            element={
+              isAuthenticated ? (
+                <Navigate to="/home" />
+              ) : (
+                <Navigate to="/login" />
+              )
             }
           />
         </Routes>
