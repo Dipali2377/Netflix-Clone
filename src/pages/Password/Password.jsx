@@ -1,4 +1,4 @@
-import logo from "/Netflix_Logo_PMS.png";
+import logo from "../../../public/Netflix_Logo_PMS.png";
 import "../Password/Password.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";

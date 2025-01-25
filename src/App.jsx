@@ -6,32 +6,38 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import "./i18n";
 import { Player } from "./pages/Player/Player";
 
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import PropTypes from "prop-types"; // For prop-types validation
 
-// eslint-disable-next-line react/prop-types
+// Utility function to check authentication
+const isAuthenticated = () => {
+  return JSON.parse(localStorage.getItem("isAuthenticated") || "false");
+};
+
+// ProtectedRoute Component
 const ProtectedRoute = ({ children }) => {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
-
-  if (!isAuthenticated) {
+  if (!isAuthenticated()) {
     return <Navigate to="/login" />;
   }
   return children;
 };
 
-function App() {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
+// Define prop-types for ProtectedRoute
+ProtectedRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
+function App() {
   return (
     <>
       <div>
         <ToastContainer theme="dark" />
         <Routes>
-          {/* public routes */}
+          {/* Public Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
-          {/* protected routes */}
-
+          {/* Protected Routes */}
           <Route
             path="/home"
             element={
@@ -48,11 +54,12 @@ function App() {
               </ProtectedRoute>
             }
           />
-          {/* root route - to check if the user is authenticated? */}
+
+          {/* Root Route */}
           <Route
             path="/"
             element={
-              isAuthenticated ? (
+              isAuthenticated() ? (
                 <Navigate to="/home" />
               ) : (
                 <Navigate to="/login" />

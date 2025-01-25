@@ -1,5 +1,5 @@
 import "../Login/Login.css";
-import logo from "/Netflix_Logo_PMS.png";
+import logo from "../../../public/Netflix_Logo_PMS.png";
 import { Link, useNavigate } from "react-router-dom";
 // import netflix-spinner from "/netflix-spinner.png"
 
